@@ -5,15 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- my-stylesheet -->
     <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
     <link rel="stylesheet" href="/assets/css/style.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>hair salon portfolio</title>
+    <title>低価格かつスピーディにWebサイト作成</title>
 </head>
 <body>
+
+    <nav class="drawer-nav clear">
+
+        <div class="drawer-logo-box">
+            <img src="/assets/images/logo.png" alt="" class="drawer-logo">
+        </div>
+
+        <div class="drawer-togglers">
+            <span class="drawer-opener"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            <span class="drawer-closer"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div><!--drawer-toggles-->
+            
+        <div class="drawer-content wow">
+            <ul class="drawer-menu">
+                
+                <li class="drawer-item">
+                    <a href="#top" class="drawer-link"><i class="fa-fw fas fa-home"></i>トップ</a>
+                </li><!--/drawer-item-->
+                
+                <li class="drawer-item">
+                <a href="#price" class="drawer-link"><i class="fa-fw fas fa-yen-sign"></i>料金</a>
+                </li><!--/drawer-item-->
+                
+                <li class="drawer-item">
+                    <a href="#flow" class="drawer-link"><i class="fa-fw fas fa-wind"></i>制作の流れ</a>
+                </li><!--/drawer-item-->
+
+                <li class="drawer-item">
+                    <a href="#works" class="drawer-link"><i class="fa-fw fas fa-palette"></i>制作実績</a>
+                </li><!--/drawer-item-->
+
+                <li class="drawer-item contact-link">
+                    <a href="#contact" class="drawer-link"><i class="fa-fw fas fa-paper-plane"></i>お問い合わせ</a>
+                </li><!--/drawer-item-->
+                
+            </ul><!--/drawer-menu-->
+        </div><!--content-->
+
+    </nav><!--/drawer-nav-->
+
     <header id="top" class="">
 
-        <nav id="global-nav">
+        <nav id="global-nav" class="wow fadeInDown">
             <div class="container clear">
 
                 <div class="header-left">
@@ -24,11 +70,11 @@
                     <ul class="global-menu">
 
                         <li class="global-item">
-                            <a href="#top" class="global-link">トップ</a>
+                            <a href="#top" class="global-link active">トップ</a>
                         </li><!--/global-item-->
                         
                         <li class="global-item">
-                            <a href="#price" class="global-link">費用</a>
+                            <a href="#price" class="global-link">料金</a>
                         </li><!--/global-item-->
 
                         <li class="global-item">
@@ -49,46 +95,11 @@
             </div><!--/container-->
         </nav><!--/global-nav-->
 
-        <nav id="drawer-nav">
-
-            <div class="drawer-togglers">
-                <span class="drawer-opener"><i class="fa fa-bars" aria-hidden="true"></i></span>
-                <span class="drawer-closer"><i class="fa fa-times" aria-hidden="true"></i></span>
-            </div><!--drawer-toggles-->
-                
-            <div class="drawer-content">
-                <ul class="global-menu">
-                    
-                    <li class="global-item">
-                        <a href="#top" class="global-link">top</a>
-                    </li><!--/global-item-->
-                    
-                    <li class="global-item">
-                    <a href="#price" class="global-link">price</a>
-                    </li><!--/global-item-->
-                    
-                    <li class="global-item">
-                        <a href="#flow" class="global-link">flow</a>
-                    </li><!--/global-item-->
-
-                    <li class="global-item">
-                        <a href="#works" class="global-link">works</a>
-                    </li><!--/global-item-->
-
-                    <li class="global-item contact-link">
-                        <a href="#contact" class="global-link">contact</a>
-                    </li><!--/global-item-->
-                    
-                </ul><!--/global-menu-->
-            </div><!--content-->
-
-        </nav><!--/drawer-nav-->
-
         <div class="container hero-view clear">
 
-            <h1 class="hero-view-title">タイトルタイトル</h1>
+            <h1 class="hero-view-title wow fadeInLeft">低価格で高品質<br>そしてスピーディ</h1>
 
-            <div class="contact-form header-contact-form">
+            <div class="contact-form header-contact-form wow fadeInRight">
                 
                 <p class="form-title">お問い合わせ</p>
 
@@ -98,7 +109,7 @@
                     <input type="email" name="email" id="email" placeholder="メールアドレス" required>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="お問い合わせ内容" required></textarea>
 
-                    <input type="submit" value="send" id="" name="submit" class="cta-btn">
+                    <input type="submit" value="送信" id="" name="submit" class="cta-btn">
 
                 </form>
 
@@ -116,7 +127,7 @@
 
                 <div class="price-list">
 
-                    <div class="price-item">
+                    <div class="price-item wow fadeInLeft">
                         <i class="fas fa-paint-brush"></i>
                         <div class="item-head">
                             <h5 class="price-title">サイトデザイン・制作</h5>
@@ -124,11 +135,15 @@
                         </div><!--item-head-->
 
                         <div class="item-body">
-                            <p class="price-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minima maxime possimus molestiae asperiores quos iste, facilis nihil enim iure quis et fuga vitae quas labore, nisi aut, natus qui.</p>
+                            <p class="price-description">静的なWebサイトを作成いたします。静的なWebサイトというのはお客様のほうで記事の投稿や画像の差し替えなどができないWebサイトのことです。サイトの更新を行うためにはHTMLなど、多少のプログラミングなどの知識が必要になります。ランディングページや機能のない単純な見せるためのWebサイトをお求めの方はこちらをお勧めします。</p>
                         </div><!--item-body-->
+
+                        <div class="item-footer">
+                            <p class="duration">【納期】最短<span>1</span>週間～</p>
+                        </div><!-- item-footer -->
                     </div><!--price-item-->
 
-                    <div class="price-item">
+                    <div class="price-item wow fadeIn">
                         <i class="fab fa-wordpress"></i>
                         <div class="item-head">
                             <h5 class="price-title">WordPress化</h5>
@@ -136,11 +151,16 @@
                         </div><!--item-head-->
 
                         <div class="item-body">
-                            <p class="price-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minima maxime possimus molestiae asperiores quos iste, facilis nihil enim iure quis et fuga vitae quas labore, nisi aut, natus qui.</p>
+                            <p class="price-description">動的なWebサイトを作成いたします。動的なWebサイトというのは、お客様自身で更新のできるWebサイトの事です。インターネット上にある3割のWebサイトで使われているWordPressというツールを使って作成します。WordPressはスマホでも使えるので、気軽に記事の投稿ができます。お店のブログの投稿などをお客様自身でやりたい方にお勧めです。</p>
                         </div><!--item-body-->
+                        
+                        <div class="item-footer">
+                            <p class="duration">【納期】最短<span>2</span>週間～</p>
+                        </div><!-- item-footer -->
+
                     </div><!--price-item-->
 
-                    <div class="price-item">
+                    <div class="price-item wow fadeInRight">
                         <i class="fas fa-code-branch"></i>
                         <div class="item-head">
                             <h5 class="price-title">システム構築</h5>
@@ -148,13 +168,19 @@
                         </div><!--item-head-->
 
                         <div class="item-body">
-                            <p class="price-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minima maxime possimus molestiae asperiores quos iste, facilis nihil enim iure quis et fuga vitae quas labore, nisi aut, natus qui.</p>
+                            <p class="price-description">動的なサイト（WordPressを使ったサイト）の中で、美容院の予約や従業員の勤怠管理システムの作成、オンラインでの決済システムの導入などを行います。オンラインで予約を受けてもいきなりキャンセルされることがありますが、オンライン決済を導入すれば、予約の時点で支払いが発生するのでキャンセル率の低下につながり、売り上げの増加が見込めます。
+                            </p>
                         </div><!--item-body-->
+                        
+                        <div class="item-footer">
+                            <p class="duration">【納期】最短<span>2</span>週間～</p>
+                        </div><!-- item-footer -->
+
                     </div><!--price-item-->
 
                 </div><!--price-list-->
 
-                <p class="notion">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis cumque in accusamus, dolor autem officiis ducimus consequatur facilis! Impedit, quaerat pariatur? Maxime porro eveniet similique ducimus. Sit culpa natus ut.</p>
+                <p class="notion">セットでお申込みいただくと（サイト作成とWordPress化など）割引させていただきます。ツールの使い方、インターネットへのアップロードも料金に含まれています。（別途サーバー、ドメイン費用がかかります。）またこの他にも検索結果に表示されやすくするためのSEO対策や広告の取り扱いなども対応しています。詳しくはお問い合わせください</p>
 
                 <a href="#" class="cta-btn">お問い合わせ</a>
 
@@ -167,79 +193,85 @@
 
                 <div class="flow-list">
 
-                    <div class="flow-item">
+                    <div class="flow-item wow fadeInDown">
                         <div class="item-head">
                             <img src="/assets/images/hearing.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
                             <h6 class="flow-title">ヒアリング</h6>
-                            <p class="flow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, totam! Est dicta nihil recusandae. Cumque laboriosam tempore ad officia delectus velit est, asperiores neque! Veniam adipisci sequi sapiente. Libero, quam.</p>
+                            <p class="flow-description">お客様からのご要望をお聞きいたします。どんなサイトにしたいか、何を目的に作るのかなど。具体的な案がなくても構いません。ただミスマッチが起きてはお互いに喜ばしくありません。そのためこのヒアリングが最初のステップで一番重要になります。</p>
                             
                         </div><!--item-body-->
                     </div><!--flow-item-->
 
-                    <div class="flow-item">
+                    <div class="flow-item wow fadeInDown">
                         <div class="item-head">
                             <img src="/assets/images/designing.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
                             <h6 class="flow-title">デザイン</h6>
-                            <p class="flow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, totam! Est dicta nihil recusandae. Cumque laboriosam tempore ad officia delectus velit est, asperiores neque! Veniam adipisci sequi sapiente. Libero, quam.</p>
+                            <p class="flow-description">ヒアリング後、こちらでサイトのデザインを行います。設計図がなければ家が建たないのと同じで、デザインがなければWebサイトはできません。必要であれば途中経過をお見せすることもできます。</p>
                             
                         </div><!--item-body-->
                     </div><!--flow-item-->
 
-                    <div class="flow-item">
+                    <div class="flow-item wow fadeInDown">
                         <div class="item-head">
                             <img src="/assets/images/coding.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
                             <h6 class="flow-title">コーディング</h6>
-                            <p class="flow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, totam! Est dicta nihil recusandae. Cumque laboriosam tempore ad officia delectus velit est, asperiores neque! Veniam adipisci sequi sapiente. Libero, quam.</p>
+                            <p class="flow-description">デザインを基に実際にサイトを作っていきます。「サイトデザイン・制作」なら最短1日で仕上げます。</p>
                             
                         </div><!--item-body-->
                     </div><!--flow-item-->
 
-                    <div class="flow-item">
+                    <div class="flow-item wow fadeInDown">
                         <div class="item-head">
                             <img src="/assets/images/system.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
                             <h6 class="flow-title">WordPress化・システム構築</h6>
-                            <p class="flow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, totam! Est dicta nihil recusandae. Cumque laboriosam tempore ad officia delectus velit est, asperiores neque! Veniam adipisci sequi sapiente. Libero, quam.</p>
+                            <p class="flow-description">「サイトデザイン・制作」ではこのステップはありません。静的だったWebサイトを、WordPressを用いて動的に表示できるようにします。</p>
                             
                         </div><!--item-body-->
                     </div><!--flow-item-->
 
-                    <div class="flow-item">
+                    <div class="flow-item wow fadeInDown">
                         <div class="item-head">
                             <img src="/assets/images/upload.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
                             <h6 class="flow-title">アップロード</h6>
-                            <p class="flow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, totam! Est dicta nihil recusandae. Cumque laboriosam tempore ad officia delectus velit est, asperiores neque! Veniam adipisci sequi sapiente. Libero, quam.</p>
+                            <p class="flow-description">インターネット上にアップロードするのは、慣れていない方にとっては難しい作業です。なのですべてこちらで対応いたします。ただ、アップロードするためにはサーバ、ドメインといったものが必要でこちらの費用は別途お客様の方でご負担いただきます。
+                            </p>
                             
                         </div><!--item-body-->
                     </div><!--flow-item-->
 
-                    <div class="flow-item">
+                    <div class="flow-item wow fadeInDown">
                         <div class="item-head">
                             <img src="/assets/images/maintain.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
                             <h6 class="flow-title">メンテナンス</h6>
-                            <p class="flow-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, totam! Est dicta nihil recusandae. Cumque laboriosam tempore ad officia delectus velit est, asperiores neque! Veniam adipisci sequi sapiente. Libero, quam.</p>
+                            <p class="flow-description">ご要望があればその後のメンテナンスもいたします。画像や文章の差し替えは無料で対応します。簡単なレイアウトの変更は初回無料です。大幅なレイアウトの変更はお問い合わせください。
+                            </p>
                             
                         </div><!--item-body-->
                     </div><!--flow-item-->
                     
                 </div><!--flow-list-->
+
+                <p class="flow-text">
+                    通常WebサイトをつくるにはWebデザイナー、コーダー（プログラムを書く人）など役割が分かれており、その分人件費もかかります。しかし私は上記の行程を全て一人で行っており、無駄なマージンをとる必要がないため低価格でご案内が可能となっています。
+                </p>
 
                 <a href="" class="cta-btn">お問い合わせ</a>
 
@@ -252,25 +284,28 @@
 
                 <div class="works-list clear">
 
-                    <a href="#" class="works-item">
-                        <div class="item-body">
-                            <img src="/assets/images/daily-trial.png" alt="">
+                    <div href="#" class="works-item wow fadeIn">
+                        <div class="item-head">
+                            <a href="https://july-web-development.000webhostapp.com/" class=""><img src="/assets/images/hair-salon.png" alt=""></a>
+                            <a href="https://july-web-development.000webhostapp.com/" class="link">https://july-web-development.000webhostapp.com/</a>
                         </div><!-- item-body -->
+
                         <div class="item-footer">
-                            <p class="work-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto doloremque molestiae sapiente delectus quo sunt non harum repellendus distinctio illo et magnam repellat quisquam incidunt eum, laborum recusandae tempore maxime?</p>
+                            <p class="work-description">こちら英語ですが、美容院のデモサイトです。予約機能・管理、お客様の会員登録機能やログイン機能、クーポンの発行、従業員のシフト管理など美容院サイトに必要な様々な機能を追加しております。</p>
                         </div>
-                    </a><!--/works-item-->
+
+                    </div><!--/works-item-->
 
                 </div><!--/works-list-->
 
             </div><!--/container-->
         </section><!--/works-->
 
-        <section id="contact">
+        <section id="contact" class="wow fadeIn">
             <div class="container clear">
                 <h2 class="section-title">お問い合わせ</h2>
 
-                <p class="contact-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio ipsa vero expedita magni quaerat iste, dignissimos necessitatibus debitis recusandae non assumenda qui modi, asperiores, eius quibusdam odit veniam a. Quaerat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cupiditate, pariatur placeat ex aut laboriosam amet quia dolor obcaecati iste dolore, magnam unde veniam sapiente mollitia modi distinctio maxime id!</p>
+                <p class="contact-message">お問い合わせの返答は1日以内に行います。ご興味を持っていただけたらぜひご連絡ください。</p>
 
                 <div class="footer-form">
                     <form action="" method="">
@@ -291,11 +326,13 @@
 
     <footer>
         <div class="container">
-            <p class="copyright">&copy; 2020 hokuto sakuma all reserved</p>
+            <p class="copyright">&copy; 2020 Big Dipper all reserved</p>
         </div>
     </footer>
-
-
+    <script src="/assets/js/wow.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>
