@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   color: #333;
 }
@@ -113,7 +114,12 @@ input[type="button"]:focus {
 
 #header-cta-btn {
   height: 4.8rem;
-  line-height: 4rem;
+  line-height: 4.8rem;
+  position: fixed;
+  bottom: 2.4rem;
+  z-index: 10;
+  left: 1.6rem;
+  width: 18rem;
 }
 
 .clear::after {
@@ -132,6 +138,66 @@ input[type="button"]:focus {
   bottom: -50%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.nav-wrap {
+  position: sticky;
+  display: none;
+  top: 0;
+  z-index: 10;
+}
+
+.scroll-nav {
+  width: 100%;
+  background: #181818;
+  /* メニューの背景色 */
+  overflow-x: auto;
+  padding: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+  /* 慣性スクロール */
+}
+
+.scroll-nav ul {
+  min-width: 448px;
+  /* メニューの最小幅 */
+  height: auto;
+  line-height: 40px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0 2.4rem;
+}
+
+.scroll-nav ul li {
+  float: left;
+  margin-right: 1.6rem;
+  text-align: center;
+}
+
+.scroll-nav ul li:hover {
+  background: #222;
+  /* マウスホバー時の背景色 */
+}
+
+.scroll-nav ul li a {
+  display: inline-block;
+  color: #fff;
+  /* メニューの文字色 */
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+.next-btn {
+  /* 右側に固定する部分 */
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  /* 固定部分の幅 */
+  height: 40px;
+  /* メニューの高さに合わせる */
+  line-height: 40px;
+  background: #fff;
+  color: #555;
 }
 
 .drawer-nav {
@@ -625,17 +691,13 @@ footer p {
   .section-title {
     font-size: 4rem;
   }
-  .drawer-nav .drawer-logo-box {
-    display: block;
-  }
   header #global-nav {
-    display: none;
+    display: block;
   }
   header .hero-view {
     padding-top: 6.4rem;
   }
   header .hero-view .hero-view-title {
-    margin-top: 0;
     font-size: 5.4rem;
     height: 100vh;
   }
@@ -680,8 +742,14 @@ footer p {
   .container {
     max-width: 393px;
   }
+  .nav-wrap {
+    display: block;
+  }
   header {
     padding-bottom: 0;
+  }
+  header #global-nav {
+    display: none;
   }
   header .hero-view {
     height: 100vh;
@@ -710,5 +778,14 @@ footer p {
 @media screen and (max-width: 376px) {
   .container {
     max-width: 348px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .container {
+    max-width: 300px;
+  }
+  header .hero-view .hero-view-title {
+    font-size: 3.2rem;
   }
 }

@@ -18,45 +18,19 @@
 </head>
 <body>
 
-    <nav class="drawer-nav clear">
+<nav class="nav-wrap sm-nav">
 
-        <div class="drawer-logo-box">
-            <img src="assets/images/logo.png" alt="" class="drawer-logo">
+        <div class="scroll-nav">
+            <ul>
+                <li><a href="#top">トップ</a></li>
+                <li><a href="#price">料金</a></li>
+                <li><a href="#flow">制作の流れ</a></li>
+                <li><a href="#works">制作実績</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
         </div>
-
-        <div class="drawer-togglers">
-            <span class="drawer-opener"><i class="fa fa-bars" aria-hidden="true"></i></span>
-            <span class="drawer-closer"><i class="fa fa-times" aria-hidden="true"></i></span>
-        </div><!--drawer-toggles-->
-            
-        <div class="drawer-content wow">
-            <ul class="drawer-menu">
-                
-                <li class="drawer-item">
-                    <a href="#top" class="drawer-link"><i class="fa-fw fas fa-home"></i>トップ</a>
-                </li><!--/drawer-item-->
-                
-                <li class="drawer-item">
-                <a href="#price" class="drawer-link"><i class="fa-fw fas fa-yen-sign"></i>料金</a>
-                </li><!--/drawer-item-->
-                
-                <li class="drawer-item">
-                    <a href="#flow" class="drawer-link"><i class="fa-fw fas fa-wind"></i>制作の流れ</a>
-                </li><!--/drawer-item-->
-
-                <li class="drawer-item">
-                    <a href="#works" class="drawer-link"><i class="fa-fw fas fa-palette"></i>制作実績</a>
-                </li><!--/drawer-item-->
-
-                <li class="drawer-item contact-link">
-                    <a href="#contact" class="drawer-link"><i class="fa-fw fas fa-paper-plane"></i>お問い合わせ</a>
-                </li><!--/drawer-item-->
-                
-            </ul><!--/drawer-menu-->
-        </div><!--content-->
-
-    </nav><!--/drawer-nav-->
-
+    </nav>
+    
     <header id="top" class="">
 
         <nav id="global-nav" class="wow fadeInDown">
@@ -99,8 +73,6 @@
 
             <h1 class="hero-view-title wow fadeInLeft">丁寧かつ高品質<br>そしてスピーディ<br>なのに<span class="title-deco">低価格</span></h1>
 
-            <a href="#contact" class="cta-btn" id="header-cta-btn">お問い合わせ</a>
-
             <div class="contact-form header-contact-form wow fadeInRight">
                 
                 <p class="form-title">お問い合わせ</p>
@@ -118,6 +90,8 @@
             </div><!--/header-contact-form-->
 
         </div><!--/container-->
+
+        <a href="#contact" class="cta-btn" id="header-cta-btn">お問い合わせ</a>
 
     </header>
 

@@ -27,10 +27,13 @@ $(document).ready(function () {
         e.preventDefault();
         $(document).off("scroll");
 
-        $('a').each(function () {
+        $('#global-nav a').each(function () {
             $(this).removeClass('active');
-        })
-        $(this).addClass('active');
+        });
+
+        if($(this).hasClass('global-link')) {
+            $(this).addClass('active');
+        }
 
         var target = this.hash,
             menu = target;
@@ -73,3 +76,13 @@ $('.faq-item').on('click', function() {
     a.slideToggle();
 
 });
+
+$(window).scroll(function() {
+    const contact_position = $('#contact').offset().top;
+    let window_position = $(this).scrollTop();
+    if(contact_position - 200 <= window_position) {
+        $('#header-cta-btn').fadeOut();
+    } else {
+        $('#header-cta-btn').fadeIn();
+    }
+})
