@@ -61,3 +61,15 @@ function onScroll(event){
         }
     });
 }
+
+$('.faq-item').on('click', function() {
+    let q = $(this).find('.faq-q');
+    let p = q.children('p');
+    let i = p.children('i');
+    i.toggleClass('faq-active');
+
+    let a = $(this).find('.faq-a');
+    let answer = a.children('p');
+    a.slideToggle();
+
+});

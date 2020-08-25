@@ -6,7 +6,7 @@ $green4: #65A04A;
 $green5: #547246;
 $o_color: rgb(186, 50, 89);
 $black: #333;
-$font_family: 'Kosugi Maru', sans-serif;
+$font_family: 'Noto Sans JP', sans-serif;
 $title_font: 'Sawarabi Mincho', sans-serif;
 $opacity: 0.8;
 $transition: all .3s ease 0s;
@@ -62,6 +62,65 @@ p {
     margin-bottom: 4.8rem;
 }
 
+input[type="submit"] {
+    -webkit-appearance: none;
+    background-color: rgba(0, 0, 0, 0.32);
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0 0 1em;
+    padding: 0.6em 2em;
+    text-decoration: none;
+}
+  
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    outline: none;
+  }
+  
+  input[type="submit"]::-moz-foucus-inner {
+    border: none;
+    padding: 0;
+  }
+
+  input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+    &::-webkit-search-decoration {
+      display: none;
+    }
+    &:focus {
+      outline-offset: -2px;
+    }
+}
+
+#header-form-btn, #footer-form-btn {
+    background-color: $o_color;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    height: 6.4rem;
+    text-align: center;
+    transition: $transition;
+    width: 24rem;
+    font-size: 1.6rem;
+    border-radius: 8px;
+
+    &:hover {
+        background: rgba(186, 50, 89, $opacity);
+    }
+
+}
+
 .cta-btn {
     background-color: $o_color;
     color: white;
@@ -74,11 +133,17 @@ p {
     font-size: 1.6rem;
     line-height: 6.1rem;
     border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 
     &:hover {
         background: rgba(186, 50, 89, $opacity);
     }
 
+}
+
+#header-cta-btn {
+    height: 4.8rem;
+    line-height: 4rem;
 }
 
 .clear::after{
@@ -197,7 +262,7 @@ p {
 
 header {
     padding-bottom: 20rem;
-    background : linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/top-bg.jpg);
+    background : linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), url(../images/top-bg2.jpg);
     background-size: cover;
     // background-position: 100% 50%;
     background-repeat: no-repeat;
@@ -275,6 +340,10 @@ header {
     .hero-view {
     padding-top: 13.6rem;
 
+        #header-cta-btn {
+            display: none;
+        }
+
         .header-contact-form {
             width: 40rem;
             float: right;
@@ -333,6 +402,11 @@ header {
             font-size: 5.6rem;
             margin-top: 6.4rem;
             color: #fff;
+
+            .title-deco {
+                color: $o_color;
+            }
+
         }
 
     }//hero-view
@@ -373,8 +447,7 @@ header {
 
             .price-description {
                 text-align: justify;
-                font-weight: bold;
-                letter-spacing: 2px;
+                letter-spacing: 2.4 px;
             }
 
             .item-head {
@@ -467,10 +540,16 @@ header {
         .works-item {
             float: left;
             width: calc((100% - 66.66666666%) - 6rem);
-            margin-right: 6px;
+            margin-right: 3rem;
             background-color: #fff;
             box-shadow: 0 0 15px rgba(0, 0, 0, .3);
             border-radius: 12px;
+            display: block;
+            margin-bottom: 3rem;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
 
             .item-head {
                 img {
@@ -503,10 +582,42 @@ header {
     padding-top: 8rem;
     padding-bottom: 10.4rem;
 
-    .contact-message {
-        width: calc(100% - 40rem - 3rem);
+    .faq {
+        width: calc(100% - 40rem - 8rem);
         display: inline-block;
-        margin-right: 3rem;
+        margin-right: 8rem;
+    }
+
+    .faq-title {
+        font-size: 2.4rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .faq-active {
+        transform: rotate(225deg);
+        margin-right: 0.1rem;
+    }
+
+    .faq-item {
+        p {
+            padding: .8rem 0;
+            border-bottom: 1px solid #333;
+            margin-bottom: .8rem;
+        }
+
+        .faq-q {
+            cursor: pointer;
+
+            .fa-plus {
+                transition: $transition;
+            }
+
+        }
+
+        .faq-a {
+            display: none;
+            padding-bottom: 1.6rem;
+        }
     }
 
     .footer-form {
@@ -626,6 +737,24 @@ footer {
 }
 
 
+.thanks-message {
+    font-size: 4.8rem;
+    color: white;
+    margin-top: 8rem;
+}
+
+.back-btn {
+    display: block;
+    margin-top: 8rem;
+
+    .fas {
+        color: white;
+        margin-right: 0.8rem;
+    }
+
+}
+
+
 // ===================================
 // responsive Tab
 // ===================================
@@ -713,7 +842,7 @@ footer {
 
     #contact {
 
-        .contact-message {
+        .faq {
             width: 100%;
             display: block;
             margin-bottom: 3.2rem;
@@ -733,16 +862,41 @@ footer {
     }
 
     header {
+        padding-bottom: 0;
+
         .hero-view {
+            height: 100vh;
+
             .hero-view-title {
-                font-size: 4.8rem;
+                font-size: 4rem;
+                height: auto;
+                margin-bottom: 3.2rem;
+                display: block;
             }
+
+            #header-cta-btn {
+                display: block;
+            }
+
         }
+
+        .header-contact-form {
+            display: none;
+
+        }
+
     }
 
     .section-title {
         font-size: 3.2rem;
     }
+
+    
+    .thanks-message {
+        font-size: 3.2rem;
+        margin-top: 0;
+    }
+
 
 }
 

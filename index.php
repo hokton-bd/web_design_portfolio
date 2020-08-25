@@ -6,13 +6,13 @@
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <!-- google font -->
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
     <!-- my-stylesheet -->
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/animate.css">
-    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>低価格かつスピーディにWebサイト作成</title>
 </head>
@@ -21,7 +21,7 @@
     <nav class="drawer-nav clear">
 
         <div class="drawer-logo-box">
-            <img src="/assets/images/logo.png" alt="" class="drawer-logo">
+            <img src="assets/images/logo.png" alt="" class="drawer-logo">
         </div>
 
         <div class="drawer-togglers">
@@ -63,7 +63,7 @@
             <div class="container clear">
 
                 <div class="header-left">
-                    <img src="/assets/images/logo.png" alt="logo">
+                    <img src="assets/images/logo.png" alt="logo">
                 </div><!--/header-left-->
 
                 <div class="header-right">
@@ -97,19 +97,21 @@
 
         <div class="container hero-view clear">
 
-            <h1 class="hero-view-title wow fadeInLeft">低価格で高品質<br>そしてスピーディ</h1>
+            <h1 class="hero-view-title wow fadeInLeft">丁寧かつ高品質<br>そしてスピーディ<br>なのに<span class="title-deco">低価格</span></h1>
+
+            <a href="#contact" class="cta-btn" id="header-cta-btn">お問い合わせ</a>
 
             <div class="contact-form header-contact-form wow fadeInRight">
                 
                 <p class="form-title">お問い合わせ</p>
 
-                <form action="" method="">
+                <form action="functions.php" method="post">
                 
                     <input type="text" name="name" id="name" placeholder="お名前(会社名)" required>
                     <input type="email" name="email" id="email" placeholder="メールアドレス" required>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="お問い合わせ内容" required></textarea>
 
-                    <input type="submit" value="送信" id="" name="submit" class="cta-btn">
+                    <input type="submit" value="送信" id="header-form-btn" name="header-submit" class="cta-btn">
 
                 </form>
 
@@ -181,8 +183,11 @@
                 </div><!--price-list-->
 
                 <p class="notion">セットでお申込みいただくと（サイト作成とWordPress化など）割引させていただきます。ツールの使い方、インターネットへのアップロードも料金に含まれています。（別途サーバー、ドメイン費用がかかります。）またこの他にも検索結果に表示されやすくするためのSEO対策や広告の取り扱いなども対応しています。詳しくはお問い合わせください</p>
+                <p class="notion">
+                    低価格の理由として、Webサイト作成～公開までのすべてを一人で行っているため、他のWeb制作会社さんよりも低予算でのご案内が可能となっています。下記にもある通りWebサイト作成～公開まではいろいろな工程があり、中でもWebデザイナーやコーダー（実際にプログラミングを行う人）などの人員が必要になりその分人件費が発生します。私の場合は間の人件費、マージンが必要ないためお客様の負担になることなく高品質のWebサイトを提供することができます。
+                </p>
 
-                <a href="#" class="cta-btn">お問い合わせ</a>
+                <a href="#contact" class="cta-btn">お問い合わせ</a>
 
             </div><!--/container-->
         </section><!--/price-->
@@ -195,7 +200,7 @@
 
                     <div class="flow-item wow fadeInDown">
                         <div class="item-head">
-                            <img src="/assets/images/hearing.jpg" alt="flow" class="flow-img">
+                            <img src="assets/images/hearing.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
@@ -207,7 +212,7 @@
 
                     <div class="flow-item wow fadeInDown">
                         <div class="item-head">
-                            <img src="/assets/images/designing.jpg" alt="flow" class="flow-img">
+                            <img src="assets/images/designing.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
@@ -219,7 +224,7 @@
 
                     <div class="flow-item wow fadeInDown">
                         <div class="item-head">
-                            <img src="/assets/images/coding.jpg" alt="flow" class="flow-img">
+                            <img src="assets/images/coding.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
@@ -231,7 +236,7 @@
 
                     <div class="flow-item wow fadeInDown">
                         <div class="item-head">
-                            <img src="/assets/images/system.jpg" alt="flow" class="flow-img">
+                            <img src="assets/images/system.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
@@ -243,7 +248,7 @@
 
                     <div class="flow-item wow fadeInDown">
                         <div class="item-head">
-                            <img src="/assets/images/upload.jpg" alt="flow" class="flow-img">
+                            <img src="assets/images/upload.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
@@ -256,7 +261,7 @@
 
                     <div class="flow-item wow fadeInDown">
                         <div class="item-head">
-                            <img src="/assets/images/maintain.jpg" alt="flow" class="flow-img">
+                            <img src="assets/images/maintain.jpg" alt="flow" class="flow-img">
                         </div><!--item-head-->
 
                         <div class="item-body">
@@ -269,11 +274,7 @@
                     
                 </div><!--flow-list-->
 
-                <p class="flow-text">
-                    通常WebサイトをつくるにはWebデザイナー、コーダー（プログラムを書く人）など役割が分かれており、その分人件費もかかります。しかし私は上記の行程を全て一人で行っており、無駄なマージンをとる必要がないため低価格でご案内が可能となっています。
-                </p>
-
-                <a href="" class="cta-btn">お問い合わせ</a>
+                <a href="#contact" class="cta-btn">お問い合わせ</a>
 
             </div><!--/container-->
         </section><!--/flow-->
@@ -284,17 +285,27 @@
 
                 <div class="works-list clear">
 
-                    <div href="#" class="works-item wow fadeIn">
+                    <a href="https://july-web-development.000webhostapp.com/" class="works-item wow fadeIn">
                         <div class="item-head">
-                            <a href="https://july-web-development.000webhostapp.com/" class=""><img src="/assets/images/hair-salon.png" alt=""></a>
-                            <a href="https://july-web-development.000webhostapp.com/" class="link">https://july-web-development.000webhostapp.com/</a>
+                            <img src="assets/images/hair-salon.png" alt="">
                         </div><!-- item-body -->
 
                         <div class="item-footer">
                             <p class="work-description">こちら英語ですが、美容院のデモサイトです。予約機能・管理、お客様の会員登録機能やログイン機能、クーポンの発行、従業員のシフト管理など美容院サイトに必要な様々な機能を追加しております。</p>
                         </div>
 
-                    </div><!--/works-item-->
+                    </a><!--/works-item-->
+
+                    <a href="https://30days-trial-test.hokton.mixh.jp/" class="works-item wow fadeIn">
+                        <div class="item-head">
+                            <img src="assets/images/daily-trial.png" alt="">
+                        </div><!-- item-body -->
+
+                        <div class="item-footer">
+                            <p class="work-description">オンラインプログラミングスクール「デイトラ」の課題の一つです。WordPressを使って動的に表示しています。お客様によるニュース記事の投稿、公演スケジュールやキャストなどの追加ができます。</p>
+                        </div>
+
+                    </a><!--/works-item-->
 
                 </div><!--/works-list-->
 
@@ -305,16 +316,46 @@
             <div class="container clear">
                 <h2 class="section-title">お問い合わせ</h2>
 
-                <p class="contact-message">お問い合わせの返答は1日以内に行います。ご興味を持っていただけたらぜひご連絡ください。</p>
+                <div class="faq">
+                    <h5 class="faq-title">よくある質問</h5>
+
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <p class="question"><i class="fas fa-plus"></i>なぜ低価格なのか？</p>
+                        </div>
+                        <div class="faq-a">
+                            <p class="answer">Webサイト作成～公開に必要な行程を全て一人で行っており、無駄な人件費を取る必要がないため低価格でのご案内が可能となっております。</p>
+                        </div>
+                    </div><!-- /faq-item -->
+
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <p class="question"><i class="fas fa-plus"></i>納期はどのくらいか？</p>
+                        </div>
+                        <div class="faq-a">
+                            <p class="answer">「デザイン・作成」でしたら最短1週間、WordPress化とシステム構築は最短2週間となっています。ただお客様のご要望により工数が多くなる場合はさらにお時間をいただきます。</p>
+                        </div>
+                    </div><!-- /faq-item -->
+
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <p class="question"><i class="fas fa-plus"></i>Big Dipperとは？</p>
+                        </div>
+                        <div class="faq-a">
+                            <p class="answer">Big Dipperは星座のおおぐま座の一部である北斗七星のことです。大昔の旅人は北斗七星を利用して北極星を見つけて方角を探していました。星の北斗七星のように人の役に立ち続けたいという意味が込められています。</p>
+                        </div>
+                    </div><!-- /faq-item -->
+
+                </div><!--/ faq -->
 
                 <div class="footer-form">
-                    <form action="" method="">
+                    <form action="functions.php" method="post">
                         
                         <input type="text" name="name" id="" placeholder="お名前(会社名)" required>
                         <input type="email" name="email" id="" placeholder="メールアドレス" required>
                         <textarea name="message" id="" cols="30" rows="10" placeholder="お問い合わせ内容" required></textarea>
                         
-                        <input type="submit" value="送信" id="" name="submit" class="cta-btn">
+                        <input type="submit" value="送信" id="footer-form-btn" name="footer-submit" class="cta-btn">
                         
                     </form>
                 </div><!-- footer-form -->
@@ -329,7 +370,7 @@
             <p class="copyright">&copy; 2020 Big Dipper all reserved</p>
         </div>
     </footer>
-    <script src="/assets/js/wow.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
         new WOW().init();
